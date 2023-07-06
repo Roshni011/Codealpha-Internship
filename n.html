@@ -1,0 +1,163 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Education Animation</title>
+  <style>
+    /* Define the common styles */
+    .stage {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      background-color: #f2f2f2;
+    }
+    
+    .school {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 100px;
+      height: 100px;
+      background-color: #ff9800;
+      border-radius: 50%;
+      animation: schoolAnim 3s infinite;
+    }
+    
+    .preSchool {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 80px;
+      height: 80px;
+      background-color: #4caf50;
+      border-radius: 50%;
+      animation: preSchoolAnim 3s infinite;
+    }
+    
+    .kg {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 60px;
+      height: 60px;
+      background-color: #2196f3;
+      border-radius: 50%;
+      animation: kgAnim 3s infinite;
+    }
+    
+    /* Define the keyframe animations */
+    @keyframes schoolAnim {
+      0% { left: 0; }
+      50% { left: 50%; }
+      100% { left: 100%; }
+    }
+    
+    @keyframes preSchoolAnim {
+      0% { left: 0; }
+      50% { left: 50%; }
+      100% { left: 100%; }
+    }
+    
+    @keyframes kgAnim {
+      0% { left: 0; }
+      50% { left: 50%; }
+      100% { left: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <div class="school"></div>
+    <div class="preSchool"></div>
+    <div class="kg"></div>
+  </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Education Animation</title>
+  <style>
+    /* Define the common styles */
+    .timeline {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      background-color: #f2f2f2;
+    }
+    
+    .stage {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100px;
+      height: 100px;
+      background-color: #2196f3;
+      border-radius: 50%;
+      animation: stageAnim 4s infinite;
+    }
+    
+    .stage:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 4px;
+      background-color: #2196f3;
+      animation: lineAnim 4s infinite;
+    }
+    
+    .label {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: #333;
+    }
+    
+    /* Define the keyframe animations */
+    @keyframes stageAnim {
+      0% { left: 0; }
+      50% { left: 50%; }
+      100% { left: 100%; }
+    }
+    
+    @keyframes lineAnim {
+      0% { width: 0; }
+      50% { width: 100%; }
+      100% { width: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="timeline">
+    <div class="stage"></div>
+    <div class="label">KG</div>
+    
+    <div class="stage" style="left: 50%;">
+      <div class="label">Pre-school</div>
+    </div>
+    
+    <div class="stage" style="left: 100%;">
+      <div class="label">School</div>
+    </div>
+    
+    <div class="stage" style="left: 150%;">
+      <div class="label">College</div>
+    </div>
+  </div>
+</body>
+</html>
