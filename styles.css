@@ -6,15 +6,19 @@
   .row {
     margin: 8px -16px;
   }
-  
+  .text{
+    color: #a9d6d4;
+  }
  
-
+.skills{
+  float: left;
+}
 .intro {
     display: inline-block;
 }
 
 .animated-text {
-    opacity: 0;
+    opacity: 20;
 }
 
 
@@ -25,7 +29,11 @@
   }
   
   /* Create four equal columns that floats next to each other */
-
+ 
+ /* .collumn img{
+  width:25%;
+  float: left;
+ } */
 
   .column {
     float: left;
@@ -38,16 +46,37 @@
     display: table;
     clear: both;
   }
+  .column1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates four equal-width columns */
+    grid-gap: 20px; /* Adds some spacing between images */
+  }
+  
   
   /* Content */
   .content {
-    background-color: rgb(199, 153, 153);
+    
+    background-color: rgb(7, 133, 133);
+    border: 2px solid #084a4e;
     padding: 10px;
   }
-  
+  .content:hover{
+    background-color: rgb(16, 126, 141);
+  }
+  @media screen and (max-width: 900px) {
+    .collumn {
+      width: 50%;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .column {
+      display: flex;
+      /* width: 100%; */
+    }
+  }
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 900px) {
-    .column {
+    .collumn {
       width: 50%;
     }
   }
@@ -55,15 +84,52 @@
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
     .column {
-      width: 100%;
+      display: flex;
+      /* width: 100%; */
     }
+  }
+  .bx{
+    color: white;
   }
   body {
     font-family: Arial, sans-serif;
-    background-color: #729bbf;
+    background-color: #083344;
     line-height: 1.6;
   }
-  .dropdown-content a:hover {background-color: #f1f1f1;}
+  .sci{
+    margin: 20px;
+    display: flex;
+}
+
+.sci li{
+    list-style: none;
+}
+
+.sci li a{
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    background: #097973;
+    border: #097973;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: .5s;
+}
+
+.sci li a:hover{
+    background: rgb(77, 228, 255);
+}
+
+.sci i a .bx{
+    color: #fff;
+    font-size: 20px;
+}
+
+  .dropdown-content a:hover {background-color: #d8c6c6;}
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -74,14 +140,14 @@
   }
 .dropbtn {
     display: inline-block;
-    color: white;
+    color: rgb(223, 218, 218);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
   
   li a:hover, .dropdown:hover .dropbtn {
-    background-color: rgb(48, 228, 195);
+    background-color: rgb(20, 113, 150);
   }
   
   li.dropdown {
@@ -90,7 +156,7 @@
   input[type=text] {
     width: 130px;
     box-sizing: border-box;
-    border: 2px solid #ccc;
+    border: 2px solid #0a2257;
     border-radius: 4px;
     font-size: 16px;
     background-color: white;
@@ -100,13 +166,13 @@
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
   }
-  input[type=email] {
+  input[type=email], textarea{
     width: 130px;
     box-sizing: border-box;
-    border: 2px solid #ccc;
+    border: 2px solid #031152;
     border-radius: 4px;
     font-size: 16px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     background-position: 10px 10px; 
     background-repeat: no-repeat;
     padding: 12px 20px 12px 9px;
@@ -124,7 +190,7 @@
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #1373a0;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -142,6 +208,7 @@
     color: #fff;
     padding: 20px;
   }
+  
   .topnav a:hover {
     background-color: #a3dce4;
     color: black;
@@ -161,7 +228,7 @@
   }
   
   nav ul li a {
-    color: #fff;
+    color: hsl(315, 22%, 50%);
     text-decoration: none;
     padding: 10px;
   }
@@ -172,7 +239,7 @@
     padding: 0 20px;
   }
   .hero.is-white .title {
-    color: #141c3a;
+    color: #000001;
 }
   
   section {
@@ -231,8 +298,10 @@
     border-radius: 15px;
   }
   
-  .success {background-color: #3f7c65;
+  .success {background-color: #2b5893;
     border: 2px solid #0f0c0c;} /* Green */
-  .success:hover {background-color: #46a049;}
+  .success:hover {background-color: #181455;}
  
+
+
 
